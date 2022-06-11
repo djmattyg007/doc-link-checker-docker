@@ -57,6 +57,8 @@ jobs:
           images: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
           flavor: |
             latest=true
+          labels: |
+            org.opencontainers.image.source="https://github.com/djmattyg007/doc-link-checker-cli"
           tags: |
             type=semver,pattern={{major}},value=${{ steps.get-version.outputs.version }}
             type=semver,pattern={{major}}.{{minor}},value=${{ steps.get-version.outputs.version }}
