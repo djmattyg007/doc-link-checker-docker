@@ -3,7 +3,7 @@ FROM node:lts-alpine@sha256:c785e617c8d7015190c0d41af52cc69be8a16e3d9eb7cb21f0bb
 LABEL org.opencontainers.image.source="https://github.com/djmattyg007/doc-link-checker-cli"
 
 # renovate: datasource=npm depName=doc-link-checker-cli
-ENV DOC_LINK_CHECKER_CLI_VERSION="1.0.2"
+ENV DOC_LINK_CHECKER_CLI_VERSION="1.0.3"
 
 RUN npm install -g "doc-link-checker-cli@${DOC_LINK_CHECKER_CLI_VERSION}"
 
