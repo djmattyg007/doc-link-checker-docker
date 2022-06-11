@@ -1,6 +1,6 @@
 # Doc Link Checker for Docker
 
-[![CI](https://github.com/djmattyg007/doc-link-checker-docker/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/djmattyg007/doc-link-checker-docker/actions/workflows/ci.yml)
+[![CI](https://github.com/djmattyg007/doc-link-checker-docker/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/djmattyg007/doc-link-checker-docker/actions/workflows/ci.yaml)
 
 ## Build
 
