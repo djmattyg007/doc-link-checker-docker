@@ -44,10 +44,10 @@ jobs:
           username: "${{ github.actor }}"
           password: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: "Get date for image tag"
-        id: "get-date"
+      - name: "Get version for image tag"
+        id: "get-version"
         run: |
-          echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
+          echo "::set-output name=version::$(grep 'ENV DOC_LINK_CHECKER_CLI_VERSION' < Dockerfile | awk -F "\"" '{print $2}')"
         shell: "bash"
 
       - name: "Extract metadata (tags, labels) for Docker"
@@ -58,7 +58,7 @@ jobs:
           flavor: |
             latest=true
           tags: |
-            type=raw,value=${{ steps.get-date.outputs.date }}
+            type=raw,value=${{ steps.get-version.outputs.version }}
 
       - name: "Build and push container image"
         uses: "docker/build-push-action@v3"
