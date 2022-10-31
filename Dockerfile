@@ -1,4 +1,4 @@
-FROM node:lts-alpine@sha256:2175727cef5cad4020cb77c8c101d56ed41d44fbe9b1157c54f820e3d345eab1
+FROM node:lts-alpine@sha256:1f09c210a17508d34277971b19541a47a26dc5a641dedc03bd28cff095052996
 
 # renovate: datasource=npm depName=doc-link-checker-cli
 ENV DOC_LINK_CHECKER_CLI_VERSION="1.0.4"
